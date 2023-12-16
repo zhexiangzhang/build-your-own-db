@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace XXCore.Utilities
 {
     // read and write numeric data in little endian byte order
-    internal static class LittleEndianByteOrder
+    public static class LittleEndianByteOrder
     {
         public static byte[] GetBytes(int value)
         {

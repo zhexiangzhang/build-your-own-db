@@ -27,7 +27,7 @@ namespace XXCore
     *      Dispose() : release the resources used by the block
     *      
     **/
-    internal class Block : IBlock
+    public class Block : IBlock
     {
 
         private readonly BlockStorage storage;
@@ -115,7 +115,7 @@ namespace XXCore
                 throw new ObjectDisposedException("Block");
 
             // Validate argument
-            if (false == ((count >= 0) && ((count + srcOffset) <= storage.getBlockDataSize()))
+            if (false == ((count >= 0) && ((count + srcOffset) <= storage.getBlockDataSize())))
             {
                 throw new ArgumentOutOfRangeException("Requested count is outside of src bounds: Count=" + count, "count");
             }

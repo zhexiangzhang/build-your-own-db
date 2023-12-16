@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XXCore
 {
-    internal interface IBlockStorage
+    public interface IBlockStorage
     {
         // total size (byte) of a block = header + data
         int getBlockSize();
@@ -21,6 +21,6 @@ namespace XXCore
         IBlock Find(uint blockId);
 
         // Allocate a new block
-        IBlock Create();
+        IBlock CreateNew();
     }
 }

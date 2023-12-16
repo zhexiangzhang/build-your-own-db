@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1457A327-A412-4440-A25E-036B982BFC7C}</ProjectGuid>
+    <ProjectGuid>{F2617397-BFF9-4A9F-B34F-DC023783EF34}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>XXTest</RootNamespace>
     <AssemblyName>XXTest</AssemblyName>
@@ -34,6 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlockStorageTest.cs" />
+    <Compile Include="UnitTestHelper.cs" />
+    <ProjectReference Include="..\XXCore\XXCore.csproj">
+      <Project>{68618684-207C-4F00-A698-A5A72A16F4A6}</Project>
+      <Name>XXCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit">
+      <Version>2.6.5</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

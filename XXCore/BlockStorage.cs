@@ -14,7 +14,7 @@ namespace XXCore
      *      Find(uint blockId) : find a block by id
      *      Create() : Allocate a new block
      **/
-    internal class BlockStorage : IBlockStorage
+    public class BlockStorage : IBlockStorage
     {
         private readonly Stream stream;
         private readonly int blockSize;
@@ -52,7 +52,7 @@ namespace XXCore
          *   Public Methods
          **/
 
-        public IBlock Create()
+        public IBlock CreateNew ()
         {
             if ((this.stream.Length % blockSize) != 0)
             {
@@ -103,11 +103,6 @@ namespace XXCore
             // when block disposed, remove it from memory
             block.Disposed += HandleBlockDisposed;
             return block;
-        }
-
-        private void Block_Disposed(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         public int getDiskSectorSize()

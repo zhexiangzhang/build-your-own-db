@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XXCore
 {
-    internal interface IBlock : IDisposable // to release the resources used by the block
+    public interface IBlock : IDisposable // to release the resources used by the block
     {
         uint Id { get; } // unique block id
 
